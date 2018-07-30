@@ -56,10 +56,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || gArgs.IsArgSet("-?") || gArgs.IsArgSet("-h") || gArgs.IsArgSet("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf(_("%s fxtc-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf(_("%s bata-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  fxtc-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded fxtc transaction") + "\n" +
-              "  fxtc-tx [options] -create [commands]   " + _("Create hex-encoded fxtc transaction") + "\n" +
+              "  bata-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded bata transaction") + "\n" +
+              "  bata-tx [options] -create [commands]   " + _("Create hex-encoded bata transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

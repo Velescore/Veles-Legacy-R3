@@ -206,7 +206,7 @@ void Shutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("fxtc-shutoff");
+    RenameThread("bata-shutoff");
     mempool.AddTransactionsUpdated(1);
 
     StopHTTPRPC();
@@ -543,7 +543,9 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageGroup(_("Block creation options:"));
     strUsage += HelpMessageOpt("-blockmaxweight=<n>", strprintf(_("Set maximum BIP141 block weight (default: %d)"), DEFAULT_BLOCK_MAX_WEIGHT));
     strUsage += HelpMessageOpt("-blockmintxfee=<amt>", strprintf(_("Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)"), CURRENCY_UNIT, FormatMoney(DEFAULT_BLOCK_MIN_TX_FEE)));
-    strUsage += HelpMessageOpt("-algo=<algo>", strprintf(_("Mining algorithm: sha256d, scrypt, nist5, lyra2z, x11, x16r (default: sha256d)")));
+    // FXTC BEGIN
+    strUsage += HelpMessageOpt("-algo=<algo>", strprintf(_("Mining algorithm: sha256d, scrypt, nist5, lyra2z, x11, x16r (default: scrypt)")));
+    // FXTC END
     if (showDebug)
         strUsage += HelpMessageOpt("-blockversion=<n>", "Override block version to test forking scenarios");
 
@@ -569,7 +571,7 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/fxtc/fxtc>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/bata/bata>";
     const std::string URL_WEBSITE = "<https://fixedtradecoin.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2009, COPYRIGHT_YEAR) + " ") + "\n" +
@@ -674,7 +676,7 @@ void CleanupBlockRevFiles()
 void ThreadImport(std::vector<fs::path> vImportFiles)
 {
     const CChainParams& chainparams = Params();
-    RenameThread("fxtc-loadblk");
+    RenameThread("bata-loadblk");
 
     {
     CImportingNow imp;
@@ -1200,8 +1202,9 @@ bool AppInitParameterInteraction()
         }
     }
 
+    // FXTC BEGIN
     // algo switch
-    std::string strAlgo = gArgs.GetArg("-algo","sha256d");
+    std::string strAlgo = gArgs.GetArg("-algo","scrypt");
     transform(strAlgo.begin(), strAlgo.end(), strAlgo.begin(), ::tolower);
     if (strAlgo == "sha256d")
          miningAlgo = ALGO_SHA256D;
@@ -1216,7 +1219,8 @@ bool AppInitParameterInteraction()
     else if (strAlgo == "x16r")
          miningAlgo = ALGO_X16R;
     else
-         miningAlgo = ALGO_SHA256D; // FXTC TODO: we should not be here
+         miningAlgo = ALGO_SCRYPT; // FXTC TODO: we should not be here
+    // FXTC END
 
     return true;
 }
@@ -1293,9 +1297,9 @@ bool AppInitMain()
     // Warn about relative -datadir path.
     if (gArgs.IsArgSet("-datadir") && !fs::path(gArgs.GetArg("-datadir", "")).is_absolute()) {
         LogPrintf("Warning: relative datadir option '%s' specified, which will be interpreted relative to the "
-                  "current working directory '%s'. This is fragile, because if fxtcoin is started in the future "
+                  "current working directory '%s'. This is fragile, because if Bata is started in the future "
                   "from a different location, it will be unable to locate the current data files. There could "
-                  "also be data loss if fxtcoin is started while in a temporary directory.\n",
+                  "also be data loss if Bata is started while in a temporary directory.\n",
             gArgs.GetArg("-datadir", ""), fs::current_path().string());
     }
 

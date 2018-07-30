@@ -42,12 +42,12 @@
         <translation>Recebendo informações</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas são suas informações para o envio de pagamentos por FxTCoins. Sempre cheque a quantia enviada e as informações do destinatário, antes de enviar os FxTCoins.</translation>
+        <source>These are your Bata addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas são suas informações para o envio de pagamentos por Batas. Sempre cheque a quantia enviada e as informações do destinatário, antes de enviar os Batas.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas são suas informações para o recebimento de pagamentos por FxTCoins. É recomendado que seja feito o uso de um novo conjunto de informações para cada transação.</translation>
+        <source>These are your Bata addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas são suas informações para o recebimento de pagamentos por Batas. É recomendado que seja feito o uso de um novo conjunto de informações para cada transação.</translation>
     </message>
     <message>
         <source>Export Address List</source>

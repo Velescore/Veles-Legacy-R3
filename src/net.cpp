@@ -1616,7 +1616,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "FxTC " + FormatFullVersion();
+        std::string strDesc = "Bata " + FormatFullVersion();
 
         try {
             while (true) {

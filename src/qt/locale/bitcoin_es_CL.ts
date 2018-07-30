@@ -342,8 +342,8 @@
         <translation>Cargando el index de bloques...</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Enviar monedas a una dirección fxtcoin</translation>
+        <source>Send coins to a Bata address</source>
+        <translation>Enviar monedas a una dirección Bata</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>Verificar mensaje....</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Bata</source>
+        <translation>Bata</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -386,7 +386,7 @@
         <translation>&amp;Mostrar/Ocultar</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <source>Sign messages with your Bata addresses to prove you own them</source>
         <translation>Firmar un mensaje para provar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -410,8 +410,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and fxtcoin: URls)</translation>
+        <source>Request payments (generates QR codes and Bata: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and Bata: URls)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -652,8 +652,8 @@
         <translation>Copiar comisión</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Bata</source>
+        <translation>Bata</translation>
     </message>
     <message>
         <source>Copy bytes</source>
@@ -692,8 +692,8 @@
         <translation>(sin etiqueta)</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abre automáticamente el puerto del cliente FxTCoin en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
+        <source>Automatically open the Bata client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abre automáticamente el puerto del cliente Bata en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <source>(change)</source>
@@ -3485,7 +3485,7 @@
         <translation>Realiza las operaciones de difusión del monedero</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
+        <source>Sign the message to prove you own this Bata address</source>
         <translation>Firmar un mensjage para probar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -3533,8 +3533,8 @@
         <translation>Usar cambio aún no confirmado al enviar transacciones (por defecto: %u)</translation>
     </message>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>fxtcoin core</translation>
+        <source>Bata Core</source>
+        <translation>Bata core</translation>
     </message>
     <message>
         <source>The wallet will avoid paying less than the minimum relay fee.</source>

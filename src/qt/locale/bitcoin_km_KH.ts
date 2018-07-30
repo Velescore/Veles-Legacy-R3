@@ -90,8 +90,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន FxTCoin មួយ</translation>
+        <source>Send coins to a Bata address</source>
+        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន Bata មួយ</translation>
     </message>
     <message>
         <source>Wallet</source>

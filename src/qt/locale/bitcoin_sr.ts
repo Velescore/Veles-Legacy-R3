@@ -342,8 +342,8 @@
         <translation>Поново идексирање блокова на диску.</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Пошаљите новац на fxtcoin адресу</translation>
+        <source>Send coins to a Bata address</source>
+        <translation>Пошаљите новац на Bata адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>

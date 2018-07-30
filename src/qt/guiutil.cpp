@@ -129,7 +129,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a FxTCoin address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Bata address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
@@ -148,7 +148,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("fxtcoin"))
+    if(!uri.isValid() || uri.scheme() != QString("Bata"))
         return false;
 
     SendCoinsRecipient rv;
@@ -212,9 +212,9 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("fxtcoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("Bata://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 10, "fxtcoin:");
+        uri.replace(0, 10, "Bata:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -222,7 +222,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("fxtcoin:%1").arg(info.address);
+    QString ret = QString("Bata:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -634,10 +634,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "FxTCoin.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Bata.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "FxTCoin (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("FxTCoin (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Bata (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Bata (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -732,8 +732,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "FxTCoin.desktop";
-    return GetAutostartDir() / strprintf("fxtcoin-%s.lnk", chain);
+        return GetAutostartDir() / "Bata.desktop";
+    return GetAutostartDir() / strprintf("Bata-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -777,9 +777,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=FxTCoin\n";
+            optionFile << "Name=Bata\n";
         else
-            optionFile << strprintf("Name=FxTCoin (%s)\n", chain);
+            optionFile << strprintf("Name=Bata (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
