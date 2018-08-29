@@ -342,8 +342,8 @@
         <translation>Cargando el index de bloques...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar monedas a una dirección bitcoin</translation>
+        <source>Send coins to a Bata address</source>
+        <translation>Enviar monedas a una dirección Bata</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>Verificar mensaje....</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Bata</source>
+        <translation>Bata</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -386,15 +386,7 @@
         <translation>&amp;Mostrar/Ocultar</translation>
     </message>
     <message>
-        <source>Show or hide the main Window</source>
-        <translation>Mostrar u ocultar la ventana principal</translation>
-    </message>
-    <message>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Cifrar las claves privadas de su monedero</translation>
-    </message>
-    <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Bata addresses to prove you own them</source>
         <translation>Firmar un mensaje para provar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -418,8 +410,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and bitcoin: URls)</translation>
+        <source>Request payments (generates QR codes and Bata: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and Bata: URls)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -660,8 +652,8 @@
         <translation>Copiar comisión</translation>
     </message>
     <message>
-        <source>Copy after fee</source>
-        <translation>Copiar después de la comisión</translation>
+        <source>Bata</source>
+        <translation>Bata</translation>
     </message>
     <message>
         <source>Copy bytes</source>
@@ -700,8 +692,8 @@
         <translation>(sin etiqueta)</translation>
     </message>
     <message>
-        <source>change from %1 (%2)</source>
-        <translation>cambia desde %1 (%2)</translation>
+        <source>Automatically open the Bata client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abre automáticamente el puerto del cliente Bata en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <source>(change)</source>
@@ -3493,8 +3485,8 @@
         <translation>Realiza las operaciones de difusión del monedero</translation>
     </message>
     <message>
-        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: %u)</source>
-        <translation>Búfer de recepción máximo por conexión, &lt;n&gt;*1000 bytes (por defecto: %u)</translation>
+        <source>Sign the message to prove you own this Bata address</source>
+        <translation>Firmar un mensjage para probar que usted es dueño de esta dirección</translation>
     </message>
     <message>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: %u)</source>
@@ -3541,8 +3533,8 @@
         <translation>Usar cambio aún no confirmado al enviar transacciones (por defecto: %u)</translation>
     </message>
     <message>
-        <source>Starting network threads...</source>
-        <translation>Iniciando procesos de red...</translation>
+        <source>Bata Core</source>
+        <translation>Bata core</translation>
     </message>
     <message>
         <source>The wallet will avoid paying less than the minimum relay fee.</source>

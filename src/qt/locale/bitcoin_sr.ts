@@ -342,12 +342,8 @@
         <translation>Поново идексирање блокова на диску.</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Пошаљите новац на Биткоин адресу</translation>
-    </message>
-    <message>
-        <source>Backup wallet to another location</source>
-        <translation>Направите резервну копију новчаника на другој локацији</translation>
+        <source>Send coins to a Bata address</source>
+        <translation>Пошаљите новац на Bata адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>

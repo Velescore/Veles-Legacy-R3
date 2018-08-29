@@ -1,4 +1,6 @@
 // Copyright (c) 2011-2017 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2018 FXTC developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -49,6 +51,9 @@ public:
 
     //! Return number of connections, default is in- and outbound (total)
     int getNumConnections(unsigned int flags = CONNECTIONS_ALL) const;
+    // Dash
+    QString getMasternodeCountString() const;
+    //
     int getNumBlocks() const;
     int getHeaderTipHeight() const;
     int64_t getHeaderTipTime() const;
@@ -87,16 +92,26 @@ public:
 private:
     OptionsModel *optionsModel;
     PeerTableModel *peerTableModel;
+    // Dash
+    QString cachedMasternodeCountString;
+    //
     BanTableModel *banTableModel;
 
     QTimer *pollTimer;
+    // Dash
+    QTimer *pollMnTimer;
+    //
 
     void subscribeToCoreSignals();
     void unsubscribeFromCoreSignals();
 
 Q_SIGNALS:
     void numConnectionsChanged(int count);
+    // Dash
+    void strMasternodesChanged(const QString &strMasternodes);
+    //
     void numBlocksChanged(int count, const QDateTime& blockDate, double nVerificationProgress, bool header);
+    void additionalDataSyncProgressChanged(double nSyncProgress);
     void mempoolSizeChanged(long count, size_t mempoolSizeInBytes);
     void networkActiveChanged(bool networkActive);
     void alertsChanged(const QString &warnings);
@@ -110,6 +125,9 @@ Q_SIGNALS:
 
 public Q_SLOTS:
     void updateTimer();
+    // Dash
+    void updateMnTimer();
+    //
     void updateNumConnections(int numConnections);
     void updateNetworkActive(bool networkActive);
     void updateAlert();
