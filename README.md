@@ -32,7 +32,7 @@ Build
 ----------------------
 1.  Clone the source:
 
-        git clone https://github.com/BTA-BATA/Bataoshi
+        git clone https://github.com/BTA-BATA/Bataoshi/tree/0.16
 
 2.  Build Bata Core:
 
