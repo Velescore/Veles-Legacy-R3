@@ -2367,7 +2367,10 @@ void static UpdateTip(const CBlockIndex *pindexNew, const CChainParams& chainPar
     }
 
     std::vector<std::string> warningMessages;
-    if (!IsInitialBlockDownload())
+    // BATA BEGIN
+    //if (!IsInitialBlockDownload())
+    if (false)
+    // BATA END
     {
         int nUpgraded = 0;
         const CBlockIndex* pindex = pindexNew;
