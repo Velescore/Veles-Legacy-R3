@@ -1,7 +1,7 @@
 Veles Core integration/staging tree
 ==================================
 
-https://veles.io
+https://veles.network
 
 Linux Build Instructions and Notes
 ==================================
@@ -32,7 +32,7 @@ Build
 ----------------------
 1.  Clone the source:
 
-        git clone https://github.com/VLS-VELES/Velesoshi/tree/0.16
+        git clone https://github.com/Velescore/Veles-0.16.git
 
 2.  Build Veles Core:
 
