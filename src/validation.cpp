@@ -1220,19 +1220,16 @@ CAmount GetBlockSubsidy(int nHeight, CBlockHeader pblock, const Consensus::Param
         return 0;
 
     // VELES BEGIN
-    nSubsidy = 6.5 * COIN;
+    nSubsidy = 8 * COIN;
 
     if (nHeight == 1)
         nSubsidy = 50000 * COIN;
-
-  //  if (nHeight <= 1500000)
-    //    nSubsidy = 6.5 * COIN;   
-    
+     
     // Subsidy is cut in half every 865,000 blocks which will occur approximately every 3 years.
     nSubsidy >>= halvings;
 
-    if (nHeight >= 1500001)
-        nSubsidy = (3 * COIN)/2;  //Static PoW reward of 0.25 Veles until end of PoW (12,5 Million VLS)
+    if (nHeight >= 1000001)
+        nSubsidy = (8 * COIN)/2;  //Static PoW reward of 0.25 Veles until end of PoW (12,5 Million VLS)
     if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_01_FXTC_CHAIN_START)) {
         CAmount nMaxSubsidy = nSubsidy;
 
@@ -1292,7 +1289,6 @@ CAmount GetFounderReward(int nHeight, CAmount blockValue)
         // VELES BEGIN
         if (nHeight < sporkManager.GetSporkValue(SPORK_VELES_01_FXTC_CHAIN_START)) return ret;
         // VELES END
-        if (nHeight == 1) ret = blockValue * 1;
         if (nHeight >= 5) ret = blockValue * 0.05;
 
         //if (nHeight >= nEndOfFounderReward.WeDontKnowYet) ret = 0;
