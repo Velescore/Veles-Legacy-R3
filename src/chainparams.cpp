@@ -157,7 +157,15 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x2d47b87b93cc3f92a845ab41baa56b3d65764e69b6bae258d76724f19cde589b"));
         assert(genesis.hashMerkleRoot == uint256S("0xbdcdbf2e9eaf16abf1422df3406902eb22d0314ab7eda1cd44d1da75b73a4bc3"));
-
+        vFixedSeeds.clear();
+        vSeeds.clear();
+        // nodes with support for servicebits filtering should be at the
+	vSeeds.emplace_back("35.228.223.14");
+        vSeeds.emplace_back("130.211.101.120");
+	vSeeds.emplace_back("35.233.103.92");
+        vSeeds.emplace_back("89.36.216.53");
+	vSeeds.emplace_back("80.211.97.48");
+         
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as a oneshot if they dont support the
