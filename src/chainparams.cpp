@@ -295,10 +295,10 @@ public:
         nDefaultPort = 21335;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1503885814, 698199, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1541515957, 271643, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x001"));
-        assert(genesis.hashMerkleRoot == uint256S("0x001"));
+        assert(consensus.hashGenesisBlock == uint256S("0x3141b4039623ff0f86391d69394bc03c43a23a277b194980b21810e924349ccf"));
+        assert(genesis.hashMerkleRoot == uint256S("0x4a8775a67c499b83a1c9b46b185094c8a975ee79ab8cac49e8e27a8669484875"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -329,7 +329,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0xc1976360739525c4ea0949fc4a1b0086284614198a0f133b1513d79c55b5466b")},
+                {0, uint256S("0x3141b4039623ff0f86391d69394bc03c43a23a277b194980b21810e924349ccf")},
             }
         };
         // FXTC BEGIN
@@ -338,7 +338,7 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 00000706ff7091032d187cf1c2515a5d7891b6797f414526ef8a277491117d08 (height 0)
-            1503885814,
+            1541515957,
             2,
             960
         };
