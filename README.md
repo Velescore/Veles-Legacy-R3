@@ -1,3 +1,5 @@
+![Example-Logo](https://i.imgur.com/OP0aW7y.jpg?3)
+
 Veles Core integration/staging tree
 ==================================
 
