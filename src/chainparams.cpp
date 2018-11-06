@@ -196,7 +196,7 @@ public:
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
         strSporkPubKey = "045ba3e4d94368136f2cb66b873221a172f0e95d5e67e9da828e90f40dc4e4b962c19f621c6491749f3c235ab0e6c0cfbc4511a6e5569c9b18857345da589eb2e6";
 
-        founderAddress = "VNAiqpE6y5PHZj36Re2vWsmrbavntqucXn";
+        founderAddress = "VKtig9w7wfx6Ep9B4NnbwxLj1bkY2kHXBj";
 
         checkpointData = {
 	         {
