@@ -152,9 +152,9 @@ public:
         nDefaultPort = 21337;
         nPruneAfterHeight = 100;
 
-        genesis = CreateGenesisBlock(1539880957, 947131, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1541515949, 493360, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x2d47b87b93cc3f92a845ab41baa56b3d65764e69b6bae258d76724f19cde589b"));
+        assert(consensus.hashGenesisBlock == uint256S("0xd7d274ccc1d4f6ff6e5533442ff7d734a25357de4a5a4e4c01c39823cba68831"));
         assert(genesis.hashMerkleRoot == uint256S("0xbdcdbf2e9eaf16abf1422df3406902eb22d0314ab7eda1cd44d1da75b73a4bc3"));
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -194,13 +194,13 @@ public:
 
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
-        strSporkPubKey = "04099a20766e8189e7427e5ae6c455fcde19c17fd35e61fa8e4b6aaf15c34bda62a0d3cede391a0f53cbe4736df8e5a58a1c05fbd8ec203a675ba50443e3841a32";
+        strSporkPubKey = "045ba3e4d94368136f2cb66b873221a172f0e95d5e67e9da828e90f40dc4e4b962c19f621c6491749f3c235ab0e6c0cfbc4511a6e5569c9b18857345da589eb2e6";
 
         founderAddress = "VNAiqpE6y5PHZj36Re2vWsmrbavntqucXn";
 
         checkpointData = {
 	         {
-                {  0, uint256S("0x2d47b87b93cc3f92a845ab41baa56b3d65764e69b6bae258d76724f19cde589b")}
+                {  0, uint256S("0xd7d274ccc1d4f6ff6e5533442ff7d734a25357de4a5a4e4c01c39823cba68831")}
                 
           }    
         };
@@ -209,7 +209,7 @@ public:
         // FXTC
 
         chainTxData = ChainTxData{
-            1539880957, // * UNIX timestamp of last known number of transactions
+            1541515949, // * UNIX timestamp of last known number of transactions
             856096,     // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             960         // * estimated number of transactions per second after that timestamp
@@ -297,8 +297,8 @@ public:
 
         genesis = CreateGenesisBlock(1503885814, 698199, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe36b6a8bf04edc01c2b3d5c43349eda9d704b0f930bd6176b920e605442b4f52"));
+        assert(consensus.hashGenesisBlock == uint256S("0x001"));
+        assert(genesis.hashMerkleRoot == uint256S("0x001"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -323,7 +323,7 @@ public:
 
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
-        strSporkPubKey = "044c2a0e685b939cc72a04988801112f359ae55a15ccd15fb547393aaca59c389cc1971b9effa04f269284a4c52c9e61c595b143714df27c3291589a313aa7ddfe";
+        strSporkPubKey = "045ba3e4d94368136f2cb66b873221a172f0e95d5e67e9da828e90f40dc4e4b962c19f621c6491749f3c235ab0e6c0cfbc4511a6e5569c9b18857345da589eb2e6";
 
         founderAddress = "";
 
@@ -421,8 +421,8 @@ public:
 
         genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 50, consensus.nMinimumSubsidy);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000f72bba40f458c48d44c842cee04ff91a2ae833fea4c179fe62170714681"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4edd1885129d59d0276ef7ea548a77394837f2136f4dbb22d0acb3a7c4b2246c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x001"));
+        assert(genesis.hashMerkleRoot == uint256S("0x001"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
