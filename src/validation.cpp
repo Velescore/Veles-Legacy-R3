@@ -1268,10 +1268,10 @@ CAmount GetBlockSubsidy(int nHeight, CBlockHeader pblock, const Consensus::Param
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
     // VELES BEGIN
-    return blockValue * 0.45;
+    return blockValue * 0.40;
     // VELES END
 
-    CAmount ret = blockValue * 0.45;
+    CAmount ret = blockValue * 0.40;
 
     int nMNPIBlock = Params().GetConsensus().nMasternodePaymentsIncreaseBlock;
     int nMNPIPeriod = Params().GetConsensus().nMasternodePaymentsIncreasePeriod;
