@@ -1271,7 +1271,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     return blockValue * 0.45;
     // VELES END
 
-    CAmount ret = blockValue * 0.00;
+    CAmount ret = blockValue * 0.45;
 
     int nMNPIBlock = Params().GetConsensus().nMasternodePaymentsIncreaseBlock;
     int nMNPIPeriod = Params().GetConsensus().nMasternodePaymentsIncreasePeriod;
