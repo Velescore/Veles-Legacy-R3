@@ -78,7 +78,7 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 525600;
-        consensus.nMinimumSubsidy = 0.00100000 * COIN;
+        consensus.nMinimumSubsidy = 0.10000000 * COIN;
 
         consensus.nMasternodeMinimumConfirmations = 15;
 	    consensus.nMasternodePaymentsStartBlock = 50;
