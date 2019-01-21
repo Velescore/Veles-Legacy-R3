@@ -1,7 +1,14 @@
 ![Example-Logo](https://i.imgur.com/OP0aW7y.jpg?3)
 
-Veles Core integration/staging tree
-==================================
+Deprecation Warning
+===================
+This is the legacy version of Veles cryptocurrency software, third experimental public release. This version is no longer maintained and it will become incompatible after the block 50k by VCIP01 activation. 
+
+It has been superseded by version v0.17: 
+https://github.com/Velescore/Veles
+
+Archive of Veles Core R3 v0.16 integration/staging tree
+=======================================================
 
 https://veles.network
 
